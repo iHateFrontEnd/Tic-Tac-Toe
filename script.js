@@ -8,6 +8,11 @@ function start(){
     gameDiv.setAttribute('class', 'gameDiv');
     document.body.append(gameDiv);
 
+    let message = document.createElement('h1');
+    message.setAttribute('class', 'message');
+    message.innerHTML = 'x = player 1, o = player 2';
+    gameDiv.append(message);
+
     //table for the game
     let gameTable = document.createElement('table');
     gameTable.setAttribute('id', 'gameTable');
@@ -36,15 +41,43 @@ function start(){
     gameDiv.append(whoWon);
 
     whoWon.addEventListener('click', function(){
-        var result = document.createElement('h1');
-        result.setAttribute('class', 'result');
 
-        var i = document.getElementById('gameInps11').value;
-        
-        if(i == '1'){
-            console.log('code is working');
-        } else {
-            console.log('code is not working');
+        //if else statements for x (player 1)
+        if(document.getElementById('gameInps11').value == 'x' && document.getElementById('gameInps21').value == 'x' && document.getElementById('gameInps31').value == 'x'){
+            alert('Player 1 wins!')            
+        } else if(document.getElementById('gameInps12').value == 'x' && document.getElementById('gameInps22').value == 'x' && document.getElementById('gameInps32').value == 'x'){
+            alert('Player 1 wins!')            
+        } else if(document.getElementById('gameInps13').value == 'x' && document.getElementById('gameInps23').value == 'x' && document.getElementById('gameInps33').value == 'x'){
+            alert('Player 1 wins!')
+        } else if(document.getElementById('gameInps11').value == 'x' && document.getElementById('gameInps12').value == 'x' && document.getElementById('gameInps13').value == 'x'){
+            alert('Player 1 wins!')
+        } else if(document.getElementById('gameInps21').value == 'x' && document.getElementById('gameInps22').value == 'x' && document.getElementById('gameInps32').value == 'x'){
+            alert('Player 1 wins!')
+        } else if(document.getElementById('gameInps31').value == 'x' && document.getElementById('gameInps32').value == 'x' && document.getElementById('gameInps33').value == 'x'){
+            alert('Player 1 wins!')
+        } else if(document.getElementById('gameInps31').value == 'x' && document.getElementById('gameInps22').value == 'x' && document.getElementById('gameInps13').value == 'x'){
+            alert('Player 1 wins!')
+        } else if(document.getElementById('gameInps11').value == 'x' && document.getElementById('gameInps22').value == 'x' && document.getElementById('gameInps33').value == 'x'){
+            alert('Player 1 wins!')
         }
+
+        //if else statements for o (player 2)
+        if(document.getElementById('gameInps11').value == 'o' && document.getElementById('gameInps21').value == 'o' && document.getElementById('gameInps31').value == 'o'){
+            alert('Player 2 wins!')            
+        } else if(document.getElementById('gameInps12').value == 'o' && document.getElementById('gameInps22').value == 'o' && document.getElementById('gameInps32').value == 'o'){
+            alert('Player 2 wins!')            
+        } else if(document.getElementById('gameInps13').value == 'o' && document.getElementById('gameInps23').value == 'o' && document.getElementById('gameInps33').value == 'o'){
+            alert('Player 2 wins!')
+        } else if(document.getElementById('gameInps11').value == 'o' && document.getElementById('gameInps12').value == 'o' && document.getElementById('gameInps13').value == 'o'){
+            alert('Player 2 wins!')
+        } else if(document.getElementById('gameInps21').value == 'o' && document.getElementById('gameInps22').value == 'o' && document.getElementById('gameInps32').value == 'o'){
+            alert('Player 2 wins!')
+        } else if(document.getElementById('gameInps31').value == 'o' && document.getElementById('gameInps32').value == 'o' && document.getElementById('gameInps33').value == 'o'){
+            alert('Player 2 wins!')
+        } else if(document.getElementById('gameInps31').value == 'o' && document.getElementById('gameInps22').value == 'o' && document.getElementById('gameInps13').value == 'o'){
+            alert('Player 2 wins!')
+        } else if(document.getElementById('gameInps11').value == 'o' && document.getElementById('gameInps22').value == 'o' && document.getElementById('gameInps33').value == 'o'){
+            alert('Player 2 wins!')
+        }        
     });
 } 
