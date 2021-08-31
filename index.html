@@ -1,22 +1,39 @@
 <!DOCTYPE html>
-    <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Tic Tack Toe</title>
-        <link rel="stylesheet" href="style.css">
-        <script src="script.js"></script>
-    </head>
-    <body>
-        
-        <div class="selectPlayer" id="selectPlayer">
-            <h1>CLICK START TO START</h1>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic Tak Toe</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="gameDiv" class="gameDiv" onmouseout="unHoverGameDiv()" onmouseover="hoverGameDiv()">
+        <h1>X = Player 1, O = Player 2</h1>
 
-            <br/>
-            <br/>
+        <table id="gameTable" class="gameTable" onmouseover="unHoverGameDiv()">
+            <tr>
+                <td><input type="text" class="gameInps" oninput="checkWhowWon()" id="gameInpsCol1Row1"></td>
+                <td><input type="text" class="gameInps" oninput="checkWhowWon()" id="gameInpsCol2Row1"></td>
+                <td><input type="text" class="gameInps" oninput="checkWhowWon()" id="gameInpsCol3Row1"></td>
+            </tr>
 
-            <button onclick="start()" id="player2" class="player">START</button>
-        </div>
-    </body>
+            <tr>
+                <td><input type="text" class="gameInps" oninput="checkWhowWon()" id="gameInpsCol1Row2"></td>
+                <td><input type="text" class="gameInps" oninput="checkWhowWon()" id="gameInpsCol2Row2"></td>
+                <td><input type="text" class="gameInps" oninput="checkWhowWon()" id="gameInpsCol3Row2"></td>
+            </tr>
+
+            <tr>
+                <td><input type="text" class="gameInps" oninput="checkWhowWon()" id="gameInpsCol1Row3"></td>
+                <td><input type="text" class="gameInps" oninput="checkWhowWon()" id="gameInpsCol2Row3"></td>
+                <td><input type="text" class="gameInps" oninput="checkWhowWon()" id="gameInpsCol3Row3"></td>
+            </tr>
+        </table>
+
+        <button onclick="clearInputs()">clear</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
 </html>
