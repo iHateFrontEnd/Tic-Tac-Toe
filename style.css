@@ -1,70 +1,48 @@
-@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
-
-/*CSS font-rule:
-    font-family: 'Anton', sans-serif;
-*/
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 
 body{
-    background-color: orange;
-}
-
-.selectPlayer{
-    text-align: center;
     background-color: black;
-    margin-right: 100px;
-    margin-left: 100px;
-    padding-top: 100px;
-    padding-bottom: 100px;
-    margin-top: 50px;
-    border-radius: 20px;
-}  
-
-.player{
-    background-color: white;
-    height: 70px;
-    width: 200px;
-    border-radius: 12px;
-    border-style: none;
-    font-family: 'Anton', sans-serif;
-    font-size: large;
 }
 
 .gameDiv{
-    background-color: black;
-    padding-bottom: 50px;
-    padding-top: 50px;
-    margin-top: 20px;
-    margin-right: 200px;
-    margin-left: 200px;
-    border-radius: 20px;
-    padding-left: 120px;
-    text-align: center;
-    font-size: large;
+    opacity: 0;
 }
 
-.gameInp{
-    background-color: orange;
-    color: white;
-    height: 60px;
-    width: 200px;
-    border-radius: 12px;
-    border-style: none;
-    font-family: 'Anton', sans-serif;
+.gameDiv:hover{
+    background-image: linear-gradient(to top, rgb(224, 183, 106), rgba(255, 94, 0, 0.89));
 }
 
-.whoWon{
-    background-color: white;
-    color: orange;
-    height: 60px;
-    width: 300px;
-    margin-right: 110px;
-    border-radius: 12px;
-    font-size: large;
-    font-family: 'Anton', sans-serif;
-    border-style: none;
+.gameTable{
+    margin: 0 auto;
 }
 
 h1{
-    font-family: 'Anton', sans-serif;
+    font-family: 'Bebas Neue', cursive;
+    margin-bottom: 30px;
+    font-size: 60px;
+}
+
+.gameInps{
+    height: 100px;
+    width: 100px;
+    font-family: 'Bebas Neue', cursive;
+    text-align: center;
+    font-size: 35px;
+    background-color: black;
+    color: orange;
+    border-radius: 12px;
+    border-style: none;
+}
+
+button{
+    height: 80px;
+    width: 315px;
+    font-family: 'Bebas Neue', cursive;
+    margin-top: 20px;
+    font-size: 30px;
+
+    background-color: black;
     color: white;
+    border-radius: 12px;
+    border-style: none;
 }
